@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="gb2312">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="applicable-device" content="mobile">
+    <title>{dede:field.seotitle/}</title>
+    <meta http-equiv="cache-control" content="no-transform"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <meta name="keywords" content="{dede:field.keywords /}" />
+    <meta name="description" content="{dede:field.description /}" />
+    <link rel="canonical" href="http://www.ganxinet.com{dede:type typeid='0' row=1}[field:typelink /]{/dede:type}{dede:field.pagexx /}" >
+    <link href="/templets/laundry/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/templets/laundry/css/style.css" rel="stylesheet">
+</head>
+<body>
+{dede:include filename='header.htm' /}
+<p class="bg-primary">   <a href="/">　</a> > {dede:type}<a href="[field:typeurl/]">[field:typename/]</a>{/dede:type}</p>
+<div class="container-fluid list_clear">
+    <div clas="row">
+        <div class="ul_list">
+            <ul class="list-group">
+                {dede:list pagesize="10"}
+                <li class="list-group-item relist-group-item">
+                    <a href="[field:arcurl /]"><img src="[field:litpic /]" class="col-xs-4 col-md-4 img-responsive img-rounded" /></a>
+                    <dl class="col-xs-8 col-md-8" style="padding-top:8px; margin-bottom: 0px; ">
+                        <dt><a class="" style="color:#333;" href="[field:arcurl /]">[field:fulltitle /]</a></dt>
+                        <dd>[field:description function="cn_substr(@me,112)" /]</dd>
+                    </dl>
+                </li>
+                {/dede:list}
+            </ul>
+        </div>
+
+        <nav>
+            <ul class="pagination pages">
+                {dede:pagelist listitem="index,next,pageno" listsize="2"/}
+                <span class="clears"></span>
+
+            </ul>
+
+        </nav>
+
+    </div>
+</div>
+{dede:include filename='footer.htm' /}
+</body>
+</html>

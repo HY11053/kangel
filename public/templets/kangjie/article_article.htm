@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>{dede:field.title /}-{dede:global.cfg_indexname/}</title>
+<meta name="keywords" content="{dede:field.keywords/}" />
+<meta name="description" content="{dede:field.description function='html2text(@me)'/}" />
+<link rel="stylesheet" href="/templets/kangjie/static/css/style.css" type="text/css" media="all">
+<!--[if lte IE 6]>
+    <script type="text/javascript">
+        DD_belatedPNG.fix('div, ul, img, li, input , a');
+    </script>
+    <![endif]-->
+<script type="text/javascript" src="/templets/kangjie/static/js/jquery-1.10.2.min.js"></script></head>
+</head>
+<body>
+
+{dede:include filename="head.htm"/}
+
+<div class="case-warp csort">
+  <div class="case-sort">
+    <div class="weizhi">
+      <div class="xwdt">
+        <h1>{dede:field name='typename'/}</h1>
+      </div>
+      <div class="dqwz1">当前位置:{dede:field name='position'/} </div>
+    </div>
+  </div>
+</div>
+
+<div class="main1">
+  <div class="mainn">
+    <div class="mleft">
+      <div class="leftnr">
+        <div class="yuedu">
+          <script src="{dede:field name='phpurl'/}/count.php?view=yes&aid={dede:field name='id'/}&mid={dede:field name='mid'/}'type='text/javascript' language='javascrip'"></script>
+            人<br>
+          已阅读</div>
+        <div class="leftbt">
+          <h1>{dede:field.title/}</h1>
+          <div class="zuozhe">来源：{dede:field.source/}&nbsp;&nbsp; &nbsp;  &nbsp;  时间:{dede:field.pubdate function="MyDate('Y-m-d H:i',@me)"/} &nbsp; &nbsp; &nbsp; &nbsp;    责任编辑: {dede:adminname/}</div>
+        </div>
+      </div>
+      <div class="left_xx"></div>
+      <div class="left_content"> <div>
+	
+	
+	  {dede:field.body  /}
+</div>
+<br>
+ </div>
+      <div class="left_xx"></div>
+      
+      <!--百度分享代码--> 
+      
+    </div>
+    <div class="mright">
+      <div class="part2"><span><a href="/a/fengmao/dianmian/">最新风貌</a></span><a href="/a/fengmao/dianmian/"><img src="/templets/kangjie/static/images/more.jpg"/></a></div>
+<div class="part3">
+        {dede:arclist row='8' orderby='pubdate'  titlelen = '30' infolen='160' typeid='4,7'}
+
+                           <div class="zxal"> <a href="[field:arcurl/]"><img src="[field:litpic/]"   width="120" height="70"></a>
+                    
+                              <p><a href="[field:arcurl/]">[field:title/]</a></p>
+                    
+                            </div>
+       
+						 {/dede:arclist}
+
+ </div>
+      <div class="part2"><span><a href="/a/dongtai/">推荐阅读</a></span><a href="/a/dongtai/"><img src="/templets/kangjie/static/images/more.jpg"/></a></div>
+      <div class="part4">
+        <ul>
+        
+         {dede:arclist orderby='pubdate' row='6' titlelen = '30' infolen='160' typeid='2'}
+                          <li><span><a href="[field:arcurl/]"> &gt; <strong>[field:title/]</strong></a></span></li>
+						 {/dede:arclist}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+{dede:include filename="footer.htm"/}
+ 
+<script type="text/javascript" src="/templets/kangjie/static/js/jquery.infinitescroll.min.js"></script>
+<script type="text/javascript" src="/templets/kangjie/static/js/userscripts.js"></script>
+
+</body>
+</html>

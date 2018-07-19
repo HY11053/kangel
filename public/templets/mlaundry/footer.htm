@@ -1,0 +1,73 @@
+<!--留言-->
+<div class="liuyan">
+    <p>成功致富，从一个电话开始<a href="tel:400-123-4567"></a></p>
+    <p>现在留言，免费获取详细加盟资料以及多重好礼</p>
+    <form onsubmit="return false;">
+        <ul class="lyBox">
+			<div class="col-md-12 col-xs-12">
+            <li> <span>姓名：</span>
+                <input type="text"  class="form-control" id="exampleInputAmount" placeholder="您的称呼">
+            </li>
+            <li> <span>电话：</span>
+                <input type="text" name="bd_bp_messPhone" class="form-control" id="exampleInputAmount2" name="visitorPhone"  placeholder="您的电话">
+            </li>
+            <li> <span>留言：</span>
+                <textarea class="form-control" rows="3" id="notes" name="content" placeholder="备注信息" ></textarea>
+            </li>
+            <li><button type="submit" id="tj_btn" class="btn btn-warning search-submit">提交</button></li>
+			</div>
+        </ul>		
+    </form>
+</div>
+<footer>
+    <div class="bottomFooter">
+        <div class="address_info relative">
+            <div class="address_pic1 absolute"></div>
+            <!--<div class="address_pic2 absolute"></div>-->
+            <address class="col-xs-offset-5">
+                <span class="glyphicon glyphicon-earphone"></span> 400-8856-638-456 <br>
+                <span class="glyphicon glyphicon-ok-circle"></span> 沪ICP备14001404号-22<br>
+                <span class="glyphicon glyphicon-map-marker"></span> 上海市沪路4361号（呼叫中心产业基地）
+                Copyright@2007-2018 UCC国际洗衣集团干洗店加盟 <br>
+                <span class="glyphicon glyphicon-ok-circle"></span>  上海优喜洗烫设备有限公司 <br>
+            </address>
+        
+        </div>
+    </div>
+</footer>
+<script src="/templets/laundry/js/jquery.min.js"></script>
+<script src="/templets/laundry/js/bootstrap.min.js"></script>
+<script src="/templets/laundry/js/mswt.js"></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?9e96ca3d689c0dfb7b55e7a4ecdea0a4";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+$(function(){
+    $(".zonghe-nav li").click(function(){
+        $(this).children(".zonghe-con").css("display","block");
+        $(this).siblings().children(".zonghe-con").css("display","none");
+        $(this).children("h3").attr("class","zonghe-nav-moren");
+        $(this).siblings().children("h3").removeAttr("class","zonghe-nav-moren");
+    })
+})
+
+$(function(){
+
+    $("#content img").addClass("img-responsive center-block").css('height','auto').css('border-radius','5px');
+
+
+})
+</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?bbbefa036b89ad014a6125a238b18ab8";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>

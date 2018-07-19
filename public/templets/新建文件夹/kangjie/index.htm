@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="applicable-device" content="mobile">
+    <title>{dede:global.cfg_webname /}</title>
+    <link rel="canonical" href="http://www.kangel.net.cn/" >
+    <meta name="Keywords" content="{dede:global.cfg_keywords /}">
+    <meta name="Description" content="{dede:global.cfg_description /}">
+    <meta name="author" content="{dede:global.cfg_indexname /}">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="applicable-device" content="mobile">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta property="article:author" content="康洁洗衣" />
+    <link href="/templets/kangjie/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/templets/kangjie/css/bootstrap-theme.min.css">
+    <link href="/templets/kangjie/css/style.css" rel="stylesheet">
+</head>
+<body>
+{dede:include filename="header.htm"/}
+<p class="bg-primary">  <em class="col-xs-10"><span class="glyphicon glyphicon-comment"></span><a  href="javascript:void(0);" onclick="online();return false;">点击快速留言</a></em></p>
+<div class="container">
+    <div class="row">
+        <ul class="clearfix-m col-xs-12">
+            <div class="index_headBtn clear">
+                <div><a href="{dede:type typeid='1'}[field:typelink /]{/dede:type}"><img src="/templets/kangjie/images/indexIcos/icon8.png"><span>走近康洁 </span></a></div>
+                <div><a href="{dede:type typeid='2'}[field:typelink /]{/dede:type}"><img src="/templets/kangjie/images/indexIcos/icon1.png"><span>新闻中心 </span></a></div>
+                <div><a href="{dede:type typeid='3'}[field:typelink /]{/dede:type}"><img src="/templets/kangjie/images/indexIcos/icon2.png"><span>招商加盟 </span></a></div>
+                <div><a href="{dede:type typeid='5'}[field:typelink /]{/dede:type}"><img src="/templets/kangjie/images/indexIcos/icon3.png"><span>公司风貌 </span></a></div>
+                <div><a href="{dede:type typeid='17'}[field:typelink /]{/dede:type}"><img src="/templets/kangjie/images/indexIcos/icon4.png"><span>干洗店利润</span></a></div>
+                <div><a href="{dede:type typeid='8'}[field:typelink /]{/dede:type}"><img src="/templets/kangjie/images/indexIcos/icon6.png"><span> 企业品牌</span></a></div>
+                <div><a href="{dede:type typeid='18'}[field:typelink /]{/dede:type}"><img src="/templets/kangjie/images/indexIcos/icon7.png"><span>干洗店投资</span></a></div>
+                <div><a href="{dede:type typeid='13'}[field:typelink /]{/dede:type}"><img src="/templets/kangjie/images/indexIcos/icon8.png"><span>联系我们 </span></a></div>
+            </div>
+
+        </ul>
+    </div>
+</div>
+<a  href="javascript:void(0);"  class="ad01"><img src="/templets/kangjie/images/ad01.jpg"></a>
+<!--about-->
+<div class="about">
+    <div>
+        <img src="/templets/kangjie/images/watchvideo.jpg" alt="康洁洗衣宣传视频">
+      </div>
+</div>
+<!--ysst-->
+<div class="ys">
+    <div class="title">
+        <h3>康洁干洗店投资规模</h3>
+        <img src="/templets/kangjie/images/pro_t.png"> </div>
+        <ul>
+            <li> <img src="/templets/kangjie/images/ys01.jpg">
+                <h5>5万<em>基础店</em></h5>
+                <p>基础小型店</p>
+            </li>
+            <li> <img src="/templets/kangjie/images/ys02.jpg">
+                <h5>8万<em>标准店</em></h5>
+                <p>基础标准店</p>
+            </li>
+            <li> <img src="/templets/kangjie/images/ys03.jpg">
+                <h5>15万<em>黄金店</em></h5>
+                <p>黄金加盟店</p>
+            </li>
+            <li> <img src="/templets/kangjie/images/ys04.jpg">
+                <h5>30万<em>钻石店</em></h5>
+                <p>康洁钻石店</p>
+            </li>
+            <li> <img src="/templets/kangjie/images/ys05.jpg">
+                <h5>95万<em>旗舰店</em></h5>
+                <p>康洁旗舰店</p>
+            </li>
+            <li> <img src="/templets/kangjie/images/ys06.jpg">
+                <h5>加盟<em>咨询</em></h5>
+                <a href="tel:0756 - 2271997">
+                    <p>点击快速联系</p>
+                </a> </li>
+        </ul>
+</div>
+<!--ysstend-->
+<div class="pro" id="pro">
+    <div class="title">  <h3>康洁洗衣工厂</h3></div>
+    <div class="bd">
+        <div>
+            <ul class="list">
+                {dede:arclist row='6' typeid='4' flag='p' limit='0,6'}
+                <li> <a href="[field:arcurl /]" title="[field:fulltitle /]"> <img src="[field:litpic /]" alt="[field:fulltitle /]" />
+                    <p>[field:title /]</p>
+                </a>
+                    {/dede:arclist}
+            </ul>
+        </div>
+    </div>
+    {dede:type typeid='4'}<a href="[field:typelink /]" class="more">查看更多</a>{/dede:type}
+</div>
+<!--ys-->
+<div class="koubei">
+    <h3>康洁干洗店加盟实力展示</h3>
+    <div class="boxkb" id="boxkb">
+        <ul class="menu hd">
+            <li class="on">店面风采</li>
+            <li>技术培训</li>
+        </ul>
+        <div class="bd">
+            <div class="boxkbBox">
+                <ul class="list">
+                    {dede:arclist row='4' typeid='7' flag='p'}
+                    <li> <a href="[field:arcurl /]"> <img src="[field:litpic /]" alt="[field:fulltitle /]"/>
+                        <p> [field:title /] </p></a>
+                    </li>
+                    {/dede:arclist}
+
+                </ul>
+            </div>
+            <div class="boxkbBox">
+
+                <ul class="list">
+                    {dede:arclist row='4' typeid='5' flag='p'}
+                    <li> <a href="[field:arcurl /]"> <img src="[field:litpic /]" alt="[field:fulltitle /]"/>
+                        <p> [field:title /] </p></a>
+                    </li>
+                    {/dede:arclist}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--news-->
+<div class="news" id="news">
+    <ul class="menu hd">
+        <li class="on">加盟指南</li>
+        <li>企业新闻</li>
+    </ul>
+    <div class="newsBox">
+        <div class="newsList">
+            <div class="bd">
+
+                <div>
+                    <dl>
+                        {dede:arclist  row='1' orderby='pubdate' flag='h'}
+                        <dt><a href="[field:arcurl /]" title="[field:fulltitle /]”"> <img src="[field:litpic /]" title="[field:fulltitle /]”"></a></dt>
+                        <dd>
+                            <h4><a href="[field:arcurl /]"> [field:title /]</a></h4>
+                            <p>[field:infos /]... </p>
+                        </dd>
+                        {/dede:arclist}
+                    </dl>
+
+                    <ul>
+
+                        {dede:arclist typeid='16,17,18,19' row='10' orderby='pubdate' noflag='h'}
+                        <li> <a href="[field:arcurl /]" title="[field:fulltitle /]"> [field:fulltitle /]</a> </li>
+                        {/dede:arclist}
+
+                    </ul>
+                </div>
+				<div>
+                    <dl>
+                        {dede:arclist  titlelen='34'  idlist='193'}
+                        <dt><a href="[field:arcurl /]" title="[field:fulltitle /]”"> <img src="[field:litpic /]" title="[field:fulltitle /]”"></a></dt>
+                        <dd>
+                            <h4><a href="[field:arcurl /]"> [field:title /]</a></h4>
+                            <p>[field:infos /]... </p>
+                        </dd>
+                        {/dede:arclist}
+                    </dl>
+
+                    <ul>
+                        {dede:arclist noflag='h' titlelen='30' row='10' orderby='pubdate' typeid='8,9'}
+                        <li> <a href="[field:arcurl /]" title="[field:fulltitle /]"> [field:fulltitle /]</a> </li>
+                        {/dede:arclist}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{dede:include filename="footer.htm" /}
+<script src="/templets/kangjie/js/touchslide.1.1.js"></script>
+<script type="text/javascript">
+    TouchSlide({
+        slideCell: "#focus",
+        titCell: ".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+        mainCell: ".bd ul",
+        effect: "leftLoop",
+        autoPlay: true, //自动播放
+        autoPage: true, //自动分页
+        delayTime: 500,
+        interTime: 2800
+    });
+    TouchSlide({ slideCell: "#pro", autoPlay: true, interTime: 5000 });
+    TouchSlide({ slideCell: "#pk", autoPlay: true, interTime: 5000 });
+    TouchSlide({ slideCell: "#boxkb", autoPlay: true, interTime: 5000 });
+    TouchSlide({ slideCell: "#news", autoPlay: true, interTime: 5000 });
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="gb2312">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>{dede:field.seotitle /}-UCC国际洗衣</title>
+    <meta http-equiv="cache-control" content="no-transform"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <link rel="canonical" href="http://www.ganxi360.net{dede:type typeid='0' row=1}[field:typelink /]{/dede:type}{dede:field.pagexx /}" >
+    <meta name="keywords" content="{dede:field.keywords /}" />
+    <meta name="description" content="{dede:field.description /}" />
+    <link href="/templets/ganxi360net/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/templets/yousa/css/style.css" rel="stylesheet">
+</head>
+<body>
+{dede:include filename='header.htm' /}
+<p class="bg-primary">　{dede:field.position /}</p>
+
+<div class="container-fluid list_clear">
+    <div clas="row">
+        <div class="col-xs-12">
+            <div id="content">
+                <h1>{dede:field.typename /}</h1>
+
+               {dede:field.content /}
+            </div>
+        </div>
+
+
+    </div>
+    <ul class="nav nav-pills nav-stacked nav-pills-stacked-example" style="clear: both;">
+        <p class="bg-primary">  <span class="glyphicon glyphicon-flag" style="font-size: 12pt;"></span> 相关阅读</p>
+    </ul>
+    <ul class="list-group tjw_z">
+
+        {dede:arclist row='10'}
+        <li class="list-group-item"><a href="[field:arcurl /]">[field:title /]</a></li>
+        {/dede:arclist}
+
+    </ul>
+
+</div>
+{dede:include filename='footer.htm' /}
+</body>
+</html>

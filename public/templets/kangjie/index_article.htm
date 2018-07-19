@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="UTF-8"/>
+<title>{dede:field.seotitle/}-{dede:global.cfg_indexname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/templets/kangjie/static/css/style.css" type="text/css" media="all"/>
+<script type="text/javascript" src="/templets/kangjie/static/js/jquery-1.10.2.min.js"></script>
+</head>
+<body>
+{dede:include filename="head.htm"/}
+
+<div class="case-warp csort">
+  <div class="case-sort">
+    <div class="Container">
+      <ul>
+        <li class="cat-item cat-item-2"><a href="/a/fengmao/">所有</a> </li>
+
+        <li class="cat-item"><a href="/a/fengmao/gongchang/">洗衣工厂</a> </li>
+
+        <li class="current-cat"><a href="/a/fengmao/dianmian/" class="thisclass">店面风采</a></li>
+
+        <li class="cat-item"><a href="/a/fengmao/tuandui/">团队人物</a> </li>
+
+        
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="bg-gray padding60">
+  <div class="Container"> 
+    <!--case list-->
+    <div class="case-list" id="content" style="font-size:14px;"> 
+      {dede:field.content/}
+
+     </div>
+    <!--//case list--> 
+  </div>
+  <div class="clearfix"></div>
+  <div class="zs-cont">
+      <span>康洁分类洗衣</span>
+      <p>如您所见，我们追求的不仅是吸引您的眼球，而是创造服务与客户之间的共鸣</p>
+    <a href="http://v.youku.com/v_show/id_XMTI2MzE1ODc3Mg==.html?beta&from=s1.8-1-1.2&spm=0.0.0.0.4GrqRz" class="video" rel="nofollow" target="_blank"><img src="/templets/kangjie/static/images/gc-img5.jpg"></a>
+    </div>
+</div>
+{dede:include filename="footer.htm"/}
+
+
+<script type="text/javascript" src="/templets/kangjie/static/js/jquery.infinitescroll.min.js"></script> 
+<script type="text/javascript" src="/templets/kangjie/static/js/userscripts.js"></script> 
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>{dede:field.seotitle/}-{dede:global.cfg_indexname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<link rel="stylesheet" href="/templets/kangjie/static/css/style.css" type="text/css" media="all">
+<script type="text/javascript" src="/templets/kangjie/static/js/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="/templets/kangjie/static/js/focus.js" language="javascript"></script>
+</head>
+<body><!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+{dede:include filename="head.htm"/}
+
+<div class="case-warp csort">
+  <div class="case-sort2">
+    <div class="Container">
+      <ul>
+
+        <li class="cat-item"><a href="/a/dongtai/pinpai/">企业品牌</a> </li>
+
+        <li class="cat-item"><a href="/a/dongtai/zixun/">新闻资讯</a> </li>
+
+        <li class="cat-item"><a href="/a/dongtai/jiameng/">加盟我们</a> </li>
+
+        <li class="cat-item"><a href="/a/dongtai/peixun/">培训管理</a> </li>
+
+        
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="main1">
+  <div class="mainn">
+    <div class="mleft"> 
+      {dede:list pagesize='10'}
+      
+      <div class="artlist">
+
+        <div class="times" onmouseover="this.className='ontimes'" onmouseout="this.className='times'">[field:pubdate function='GetDateTimeMK(@me)' /]<br/></div>
+
+        <div class="listt">
+
+          <div class="listtbt"><a href="[field:arcurl/]"><b>[field:title/]</b></a></div>
+
+          <div class="listtnr">[field:description/]...<a href="[field:arcurl/]">[详情]</a></div>
+
+        </div>
+
+      </div>
+   
+				{/dede:list}
+      
+      
+      <div class="tg_pages">
+        <ul>
+        
+          {dede:pagelist listitem="info,index,end,pre,next,pageno,option" listsize="2"/}
+          
+
+        </ul>
+      </div>
+    </div>
+    <div class="mright">
+      <div class="part2"><span><a href="/a/fengmao/dianmian/">最新风貌</a></span><a href="/a/fengmao/dianmian/"><img src="/templets/kangjie/static/images/more.jpg"/></a></div>
+<div class="part3">
+        {dede:arclist row='8' orderby='pubdate'  titlelen = '30' infolen='160' typeid='5'}
+
+                           <div class="zxal"> <a href="[field:arcurl/]"><img src="[field:litpic/]"   width="120" height="70"></a>
+                    
+                              <p><a href="[field:arcurl/]">[field:title/]</a></p>
+                    
+                            </div>
+       
+						 {/dede:arclist}
+
+ </div>
+      <div class="part2"><span><a href="/a/dongtai/">推荐阅读</a></span><a href="/a/dongtai/"><img src="/templets/kangjie/static/images/more.jpg"/></a></div>
+      <div class="part4">
+        <ul>
+        
+         {dede:arclist row='10'  orderby='pubdate'  titlelen = '30' infolen='160' typeid='2'}
+                          <li><span><a href="[field:arcurl/]"> > <strong>[field:title/]</strong></a></span></li>
+						 {/dede:arclist}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+{dede:include filename="footer.htm"/}
+ 
+<script type="text/javascript" src="/templets/kangjie/static/js/jquery.infinitescroll.min.js"></script>
+<script type="text/javascript" src="/templets/kangjie/static/js/userscripts.js"></script>
+
+</body>
+</html>

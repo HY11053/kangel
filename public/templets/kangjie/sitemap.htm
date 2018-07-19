@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<urlset>
+    <url>
+        <loc>http://www.kangel.net.cn/</loc>
+        <lastmod>{dede:php}
+            $a=date("Y-m-d");
+            echo $a;
+            {/dede:php}</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    {dede:channelartlist row='50' type='top'}
+    <url>
+        <loc>http://www.kangel.net.cn{dede:field name="typeurl"/}</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    {/dede:channelartlist}
+
+    {dede:arclist row="10000"}<url>
+    <loc>http://www.kangel.net.cn[field:arcurl /]</loc>
+    <lastmod>[field:pubdate function="MyDate('Y-m-d',@me)"/]</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+</url>
+    {/dede:arclist}
+
+</urlset>

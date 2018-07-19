@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<urlset>
+    {dede:arclist row=10000 orderby=pubdate}
+    <url>
+        <loc>http://www.kangel.net.cn[field:arcurl/]</loc>
+        <lastmod>[field:pubdate function=strftime('%Y-%m-%d',@me)/]
+        </lastmod>
+        <changefreq>always</changefreq>
+        <priority>0.5</priority>
+        <data>
+            <display>
+                <title>[field:title/]</title>
+                <content>[field:description/]</content>
+                <tag>[field:id runphp=yes]
+                    global $dsql;
+                    $tags = '';
+                    $query = "SELECT * FROM `#@__taglist` WHERE aid='@me' ";
+                    $dsql->Execute('tag',$query);
+                    while($row = $dsql->GetArray('tag'))
+                    {
+                    $tags .= $row['tag'];
+                    }
+                    @me=$tags;
+                    [/field:id]</tag>
+                <pubTime>[field:pubdate function=strftime('%Y-%m-%d',@me)/]</pubTime>
+                <breadCrumb title="干洗店加盟" url="http://www.kangel.net.cn/"/>
+                <breadCrumb title="[field:typename/]" url="http://www.kangel.net.cn[field:typeurl/]"/>
+                <thumbnail loc="[field:litpic/]"/>
+                <image loc="[field:litpic/]" title="[field:title/]"/>
+            </display>
+        </data>
+    </url>
+    {/dede:arclist}
+</urlset>
