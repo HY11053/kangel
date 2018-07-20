@@ -17,7 +17,7 @@ class RedirectToMiddleWare
      */
     public function handle($request, Closure $next)
     {
-        if (preg_match('#(.*)/$#',$_SERVER['REQUEST_URI'],$matches))
+        if (preg_match('#(.*)/$#',$_SERVER['REQUEST_URI'],$matches) || str_contains($request->url(),'.html' || str_contains($request->url(),'.xml')))
         {
 
             if ((str_contains($request->url(),'www.')) && Agent::isMobile())
@@ -66,7 +66,7 @@ class RedirectToMiddleWare
         //Log::info('foot浏览器信息'.Agent::browser());
         //Log::info('foot是否机器人'.Agent::isRobot());
         //Log::info('foot请求地址'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);
-       //Log::info('foot-User-Agent1'.$_SERVER['HTTP_USER_AGENT']);
+        //Log::info('foot-User-Agent1'.$_SERVER['HTTP_USER_AGENT']);
         //Log::info('-----------------------------------------------------------------------');
         return $next($request);
     }

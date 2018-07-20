@@ -18,7 +18,7 @@
                 <div class="xwdt">
                     <h2>{{$thistypeinfo->typename}}</h2>
                 </div>
-                <div class="dqwz1">当前位置:<a href=/'>康洁洗衣</a> > <a href='/{{$thistypeinfo->real_path}}/'>{{$thistypeinfo->typename}}</a>>  </div>
+                <div class="dqwz1">当前位置:<a href='/'>康洁洗衣</a> > <a href='/{{$thistypeinfo->real_path}}/'>{{$thistypeinfo->typename}}</a>>  </div>
             </div>
         </div>
     </div>

@@ -34,7 +34,7 @@
                         <div class="citemtxt"> <a href="/{{$pagelist->arctype->real_path}}/{{$pagelist->id}}.html" title="{{$pagelist->title}}">
                                 <h4></h4>
                             </a>
-                            <p><span><a href=/{{$pagelist->arctype->real_path}}/{{$pagelist->id}}.html">{{$pagelist->title}}</a></span><em> <label>{{$pagelist->click}}</label> 浏览</em> </p>
+                            <p><span><a href="/{{$pagelist->arctype->real_path}}/{{$pagelist->id}}.html">{{$pagelist->title}}</a></span><em> <label>{{$pagelist->click}}</label> 浏览</em> </p>
                         </div>
                     </div>
                 </article>

@@ -180,15 +180,12 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-        Maatwebsite\Excel\ExcelServiceProvider::class,
-        Overtrue\LaravelPinyin\ServiceProvider::class,
         /*
          * Package Service Providers...
          */
         Collective\Html\HtmlServiceProvider::class,
         Overtrue\LaravelUEditor\UEditorServiceProvider::class,
         Mews\Captcha\CaptchaServiceProvider::class,
-        Overtrue\LaravelWechat\ServiceProvider::class,
         /*
          * Application Service Providers...
          */
@@ -250,10 +247,7 @@ return [
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
         'Captcha' => Mews\Captcha\Facades\Captcha::class,
-        'EasyWeChat' => Overtrue\LaravelWechat\Facade::class,
         'Ip'  => 'Zhuzhichao\IpLocationZh\Ip',
-        'Excel' => Maatwebsite\Excel\Facades\Excel::class,
-        'Pinyin' => Overtrue\LaravelPinyin\Facades\Pinyin::class,
         'Agent' => Jenssegers\Agent\Facades\Agent::class
     ],
 

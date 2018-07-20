@@ -1,9 +1,9 @@
 @extends('mobile.mobile')
 @section('headlibs')
-    <title>{{$thisarticleinfos->title}}-UCC干洗</title>
+    <title>{{$thisarticleinfos->title}}-康洁洗衣</title>
     <meta name="description" content="{{$thisarticleinfos->description}}">
     <meta name="keywords" content="{{$thisarticleinfos->keywords}}">
-    <link rel="canonical" href="{{config('app.url')}}/{{Request::getrequesturi()}}" >
+    <link rel="canonical" href="{{config('app.url')}}{{Request::getrequesturi()}}" >
 @stop
 @section('main_content')
 <p class="bg-primary">　<a href='/'>康洁洗衣店加盟</a> > <a href='/{{$thistypeinfo->real_path}}/'>{{$thistypeinfo->typename}}</a></p>

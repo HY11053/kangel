@@ -16,7 +16,6 @@
             <hr/>
             文章总数：{{\App\AdminModel\Archive::max('id')}}
             <hr/>
-            问答总数：{{\App\AdminModel\Ask::max('id')}}
             <hr/>
             收录量：
             <hr/>

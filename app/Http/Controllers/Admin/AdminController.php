@@ -88,7 +88,7 @@ class AdminController extends Controller
      */
     function Userauth()
     {
-        Admin::where('name',auth('admin')->user()->name)->value('type')?:abort(403);
+        //Admin::where('name',auth('admin')->user()->name)->value('type')?:abort(403);
         $archiveUsers=array_unique(Archive::where('created_at','>',Carbon::today())->where('created_at','<',Carbon::now())->pluck('write')->toArray());
         $brandUsers=array_unique(Brandarticle::where('created_at','>',Carbon::today())->where('created_at','<',Carbon::now())->pluck('write')->toArray());
         $productionUsers=array_unique(Production::where('created_at','>',Carbon::today())->where('created_at','<',Carbon::now())->pluck('write')->toArray());
@@ -113,59 +113,28 @@ class AdminController extends Controller
      */
     public function ArticleInfos(Request $request)
     {
-        Admin::where('name',auth('admin')->user()->name)->value('type')?:abort(403);
+        //Admin::where('name',auth('admin')->user()->name)->value('type')?:abort(403);
         $users=Admin::pluck('name','id');
         $arguments=$request->all();
-        if ($request->advertisement==0)
-        {
-            $articles=Archive::when($request->name, function ($query) use ($request) {
 
-            return $query->where('write',Admin::where('id',$request->name)->value('name'));
+        $articles=Archive::when($request->name, function ($query) use ($request) {
 
-            })->when($request->start_at, function ($query) use ($request) {
+        return $query->where('write',Admin::where('id',$request->name)->value('name'));
 
-            return $query->where('created_at', '>',Carbon::parse($request->start_at));
+        })->when($request->start_at, function ($query) use ($request) {
 
-            })->when($request->end_at, function ($query) use ($request) {
+        return $query->where('created_at', '>',Carbon::parse($request->start_at));
 
-            return $query->where('created_at', '<',Carbon::parse($request->end_at));
+        })->when($request->end_at, function ($query) use ($request) {
 
-            })->when($request->ismake, function ($query) use ($request) {
+        return $query->where('created_at', '<',Carbon::parse($request->end_at));
 
-            return $query->where('ismake',1);
+        })->when($request->ismake, function ($query) use ($request) {
 
-            })->paginate(50);
+        return $query->where('ismake',1);
 
-        }elseif ($request->advertisement==1)
-        {
-            $articles=Brandarticle::when($request->name, function ($query) use ($request) {
+        })->paginate(50);
 
-                return $query->where('write',Admin::where('id',$request->name)->value('name'));
-
-            })->when($request->start_at, function ($query) use ($request) {
-
-                return $query->where('created_at', '>',Carbon::parse($request->start_at));
-
-            })->when($request->end_at, function ($query) use ($request) {
-
-                return $query->where('created_at', '<',Carbon::parse($request->end_at));
-
-            })->paginate(50);
-        }else{
-            $articles=Production::when($request->name, function ($query) use ($request) {
-
-                return $query->where('write',Admin::where('id',$request->name)->value('name'));
-
-            })->when($request->start_at, function ($query) use ($request) {
-
-                return $query->where('created_at', '>',Carbon::parse($request->start_at));
-
-            })->when($request->end_at, function ($query) use ($request) {
-
-                return $query->where('created_at', '<',Carbon::parse($request->end_at));
-
-            })->paginate(50);
-        }
         return view('admin.article_user_list',compact('users','articles','arguments'));
     }
 
