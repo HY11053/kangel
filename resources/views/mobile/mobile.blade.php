@@ -56,6 +56,7 @@
             <a href="javascript:void(0)" onclick="online();return false;"><img class="center-block" src="/templets/mlaundry/images/3.jpg" alt="康洁干洗店面展示"></a>
 
         </div>
+    </div>
 </div>
 @yield('main_content')
 <div class="liuyan">
@@ -110,5 +111,6 @@
         $("#content img").addClass("img-responsive center-block").css('height','auto').css('border-radius','5px');
     })
 </script>
+<script src="/templets/mlaundry/js/mswt.js"></script>
 </body>
 </html>
